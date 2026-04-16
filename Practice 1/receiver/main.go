@@ -18,6 +18,7 @@ func main() {
 	defer conn.Close()
 
 	ch, err := conn.Channel()
+
 	failOnError(err, "Failed to open a channel")
 	defer ch.Close()
 
